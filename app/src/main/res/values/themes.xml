@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="Theme.MetaversePlanner" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Your base theme attributes -->
+    </style>
 
-    <style name="Theme.MetaversePlanner" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#850206</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/metanav</item>
+        <item name="postSplashScreenTheme">@style/Theme.MetaversePlanner</item>
+    </style>
 </resources>
