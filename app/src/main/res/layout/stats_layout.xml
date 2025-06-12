@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a0d0d"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📊 PHANTOM THIEF RECORDS"
+            android:textSize="20sp"
+            android:textColor="#dc143c"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#dc143c"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Stats Display Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/statsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading your phantom thief records..."
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:fontFamily="monospace"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+
+        <!-- Achievements Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🏆 ACHIEVEMENTS UNLOCKED"
+            android:textSize="18sp"
+            android:textColor="#ffd700"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/achievementsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🎯 Keep completing tasks to unlock achievements!"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:lineSpacingExtra="6dp" />
+
+        </LinearLayout>
+
+        <!-- Progress Indicators -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📈 PROGRESS TRACKING"
+            android:textSize="16sp"
+            android:textColor="#dc143c"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <!-- Level Progress -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚡ Current Level Progress"
+                android:textColor="#ffd700"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+            <ProgressBar
+                android:id="@+id/levelProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:progress="65"
+                android:max="100"
+                android:progressTint="#dc143c"
+                android:progressBackgroundTint="#333333"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/levelProgressText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0% to next level"
+                android:textColor="#b0b0b0"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Task Completion Rate -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📋 Weekly Task Completion"
+                android:textColor="#ffd700"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+            <ProgressBar
+                android:id="@+id/weeklyProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:progress="80"
+                android:max="100"
+                android:progressTint="#32cd32"
+                android:progressBackgroundTint="#333333"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/weeklyProgressText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Every step counts! 🌱"
+                android:textColor="#32cd32"
+                android:textSize="12sp"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <!-- Quick Stats Grid -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚡ QUICK STATS"
+            android:textSize="16sp"
+            android:textColor="#dc143c"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <!-- Today's Tasks Card -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/stat_card_background"
+                android:padding="12dp"
+                android:layout_marginEnd="4dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🎯"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today's Tasks"
+                    android:textColor="#b0b0b0"
+                    android:textSize="10sp"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/todaysTasksText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Streak Days Card -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/stat_card_background"
+                android:padding="12dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔥"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Streak Days"
+                    android:textColor="#b0b0b0"
+                    android:textSize="10sp"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/streakDaysText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Efficiency Card -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/stat_card_background"
+                android:padding="12dp"
+                android:layout_marginStart="4dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⭐"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Efficiency"
+                    android:textColor="#b0b0b0"
+                    android:textSize="10sp"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/efficiencyText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/btnBackToMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="◀️ RETURN TO HIDEOUT"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_secondary"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Motivational Footer -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The world is not as it should be. It's filled with distortion, and 'ruin' can no longer be avoided. - Igor"
+            android:textSize="10sp"
+            android:textColor="#666666"
+            android:textAlignment="center"
+            android:fontStyle="italic"
+            android:layout_marginTop="12dp" />
+
+    </LinearLayout>
+
+</ScrollView>
