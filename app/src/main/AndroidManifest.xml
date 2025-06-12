@@ -24,5 +24,15 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".SettingsActivity"
+            android:label="Settings"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".StatsActivity"
+            android:label="Stats"
+            android:parentActivityName=".MainActivity" />
+
     </application>
 </manifest>
